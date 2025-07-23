@@ -1,26 +1,133 @@
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/roboto/400.css";
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Import Google Fonts */
+@theme {
+  --color-primary: #0B2240;
+  --color-accent: #F26522;
+  --color-grayBg: #F5F5F5;
+  --color-bgswirl: #f5f5f5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.text-gradient {
+  background: linear-gradient(90deg, #F26522, #0B2240);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes vibrantGradient {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1) saturate(1);
+    transform: scale(1);
+  }
+  25% {
+    background-position: 50% 100%;
+    filter: brightness(1.1) saturate(1.2);
+    transform: scale(1.02);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1) saturate(1);
+    transform: scale(1);
+  }
+  75% {
+    background-position: 50% 0%;
+    filter: brightness(0.9) saturate(1.3);
+    transform: scale(1.03);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1) saturate(1);
+    transform: scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-grayBg {
+  background: linear-gradient(
+    270deg,
+    #0B2240,
+    #F26522,
+    #0B2240,
+    #F26522,
+    #0B2240
+  );
+  background-size: 1200% 1200%;
+  animation: vibrantGradient 20s ease-in-out infinite;
+  transition: background-position 0.5s ease;
+}
+@keyframes swirlGradient {
+  0% {
+    background-position: 0% 0%;
+    background-size: 150% 150%;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 100%;
+    background-size: 200% 200%;
+    transform: scale(1.02) rotate(0.5deg);
+    filter: brightness(1.05);
+  }
+  100% {
+    background-position: 0% 0%;
+    background-size: 150% 150%;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.bg-swirl {
+  background: radial-gradient(
+    circle at top left,
+    #F26522,
+    #0B2240,
+    #F26522
+  );
+  background-size: 200% 200%;
+  animation: swirlGradient 18s ease-in-out infinite;
+}
+@keyframes flowingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-flow {
+  background: linear-gradient(
+    270deg,
+    #F26522,
+    #0B2240,
+    #F26522
+  );
+  background-size: 600% 600%;
+  animation: flowingGradient 12s ease-in-out infinite;
+}
+
+@keyframes headerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header-animated-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent), #1c2e4a);
+  background-size: 300% 300%;
+  animation: headerGradient 8s ease infinite;
 }
