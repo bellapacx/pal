@@ -23,7 +23,7 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <section className="px-4 md:px-16 py-16 bg-swirl">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
         Our Work & Portfolio
       </h1>
 
