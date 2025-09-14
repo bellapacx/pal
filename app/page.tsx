@@ -1,6 +1,6 @@
 import Hero from './components/Hero'
 import AboutUs from './about/page'
-import Services from './services/page'
+import Services from './service/page'
 import Portfolio from './portfolio/page'
 import Clients from './clients/page'
 import Team from './team/page'
