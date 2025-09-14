@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { services } from '../../content/services'
+import { services } from '../content/services'
 
 // Swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -13,7 +13,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-export default function ServicesPanel() {
+export default function ServicesPanels() {
   return (
     <section className="py-20 bg-grayBg">
       <div className="max-w-6xl mx-auto px-4">

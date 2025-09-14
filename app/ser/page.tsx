@@ -1,12 +1,7 @@
-// app/services/page.tsx
 'use client'
 
-import ServicesPanel from '../components/ServicesPanel'
+import ServicesPanels from '../components/ServicesPanels'
 
 export default function ServicesPage() {
-  return (
-    <>
-      <ServicesPanel />
-    </>
-  )
+  return <ServicesPanels />
 }
