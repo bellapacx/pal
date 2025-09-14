@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 const partners = [
   { name: 'Keystone Group Investment Plc', logo: '/images/partners/keystone.png' },
   { name: 'Dasoma Technologies', logo: '/images/partners/dasoma.png' },
-  { name: 'Digital Lottery', logo: '/images/partners/digitallottery.png' },
 ]
 
 const testimonials = [
