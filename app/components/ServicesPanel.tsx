@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { services } from '../services/content/services'
+import { services } from '../../content/services'
 
 // Swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -48,7 +48,7 @@ export default function ServicesPanel() {
               </div>
               <p className="text-gray-700 mb-4">{description}</p>
               <Link
-                href={`/services/${slug}`}
+                href={`../${slug}`}
                 className="text-accent font-semibold hover:underline"
               >
                 {cta} &rarr;
